@@ -11,16 +11,16 @@
     <repository>
       <include>true</include>
       <metadata>
-        <id>central</id>
-        <url>http://mavenrepository.enelint.global:8081/nexus/content/repositories/enel/</url>
+        <id>redhat-ga-repository</id>
+        <url>https://maven.repository.redhat.com/ga/</url>
         <source>SETTINGS</source>
       </metadata>
     </repository>
     <repository>
       <include>true</include>
       <metadata>
-        <id>redhat-ga-repository</id>
-        <url>https://maven.repository.redhat.com/ga/</url>
+        <id>central</id>
+        <url>http://mavenrepository.enelint.global:8081/nexus/content/repositories/enel/</url>
         <source>SETTINGS</source>
       </metadata>
     </repository>
