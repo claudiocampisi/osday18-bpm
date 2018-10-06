@@ -11,16 +11,16 @@
     <repository>
       <include>true</include>
       <metadata>
-        <id>maven</id>
-        <url>https://repo.maven.apache.org/maven2/</url>
+        <id>redhat-ga-repository</id>
+        <url>https://maven.repository.redhat.com/ga/</url>
         <source>SETTINGS</source>
       </metadata>
     </repository>
     <repository>
       <include>true</include>
       <metadata>
-        <id>redhat-ga-repository</id>
-        <url>https://maven.repository.redhat.com/ga/</url>
+        <id>maven</id>
+        <url>https://repo.maven.apache.org/maven2/</url>
         <source>SETTINGS</source>
       </metadata>
     </repository>
