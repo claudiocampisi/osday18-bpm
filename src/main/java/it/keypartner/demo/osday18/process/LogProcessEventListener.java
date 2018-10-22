@@ -1,4 +1,4 @@
-package com.myspace.osday2018_demo;
+package it.keypartner.demo.osday18.process;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

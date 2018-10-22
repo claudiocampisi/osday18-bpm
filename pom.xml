@@ -2,11 +2,11 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.myspace</groupId>
-  <artifactId>osday2018-demo</artifactId>
-  <version>1.0.5</version>
+  <groupId>it.keypartner.demo</groupId>
+  <artifactId>osday18-process</artifactId>
+  <version>1.0.0</version>
   <packaging>kjar</packaging>
-  <name>osday2018-demo</name>
+  <name>osday18-process</name>
   <description></description>
 
   <properties>
@@ -97,4 +97,11 @@
       </plugin>
     </plugins>
   </build>
+  <distributionManagement>
+    <repository>
+      <id>central</id>
+      <name>80b49ab0e855-releases</name>
+      <url>http://18.202.9.155:8081/artifactory/libs-release-local</url>
+    </repository>
+  </distributionManagement>
 </project>

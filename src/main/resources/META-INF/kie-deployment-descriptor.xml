@@ -9,7 +9,7 @@
     <event-listeners>
         <event-listener>
             <resolver>mvel</resolver>
-            <identifier>new com.myspace.osday2018_demo.LogProcessEventListener(runtimeManager, true)</identifier>
+            <identifier>new it.keypartner.demo.osday18.process.LogProcessEventListener(runtimeManager, true)</identifier>
             <parameters/>
         </event-listener>
     </event-listeners>
