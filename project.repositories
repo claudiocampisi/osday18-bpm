@@ -3,16 +3,32 @@
     <repository>
       <include>true</include>
       <metadata>
-        <id>maven</id>
-        <url>https://repo.maven.apache.org/maven2/</url>
+        <id>redhat-ga-repository</id>
+        <url>https://maven.repository.redhat.com/ga/</url>
         <source>SETTINGS</source>
       </metadata>
     </repository>
     <repository>
       <include>true</include>
       <metadata>
-        <id>redhat-ga-repository</id>
-        <url>https://maven.repository.redhat.com/ga/</url>
+        <id>central</id>
+        <url>http://18.202.9.155:8081/artifactory/libs-release-local</url>
+        <source>DISTRIBUTION_MANAGEMENT</source>
+      </metadata>
+    </repository>
+    <repository>
+      <include>true</include>
+      <metadata>
+        <id>central</id>
+        <url>http://mavenrepository.enelint.global:8081/nexus/content/repositories/enel/</url>
+        <source>SETTINGS</source>
+      </metadata>
+    </repository>
+    <repository>
+      <include>true</include>
+      <metadata>
+        <id>central</id>
+        <url>http://18.202.9.155:8081/artifactory/libs-release</url>
         <source>SETTINGS</source>
       </metadata>
     </repository>
@@ -27,8 +43,16 @@
     <repository>
       <include>true</include>
       <metadata>
-        <id>central</id>
-        <url>http://mavenrepository.enelint.global:8081/nexus/content/repositories/enel/</url>
+        <id>snapshots</id>
+        <url>http://18.202.9.155:8081/artifactory/libs-snapshot</url>
+        <source>SETTINGS</source>
+      </metadata>
+    </repository>
+    <repository>
+      <include>true</include>
+      <metadata>
+        <id>maven</id>
+        <url>https://repo.maven.apache.org/maven2/</url>
         <source>SETTINGS</source>
       </metadata>
     </repository>
