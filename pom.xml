@@ -4,22 +4,25 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>it.keypartner.demo</groupId>
   <artifactId>osday18-process</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>kjar</packaging>
   <name>osday18-process</name>
   <description></description>
-
+  <distributionManagement>
+    <repository>
+      <id>central</id>
+      <name>80b49ab0e855-releases</name>
+      <url>http://18.202.9.155:8081/artifactory/libs-release-local</url>
+    </repository>
+  </distributionManagement>
   <properties>
-    <!-- RHPAM 7.0.0 - bom version -> 7.0.0.GA-redhat-3 - maven library -> 7.7.0.Final-redhat-7 -->
-    <version.org.rhpam>7.0.0.GA-redhat-3</version.org.rhpam>
-    <!-- Properties for Maven Compiler Plugin -->
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.showWarnings>true</maven.compiler.showWarnings>
     <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
+    <version.org.rhpam>7.0.0.GA-redhat-3</version.org.rhpam>
     <maven.compiler.optimize>true</maven.compiler.optimize>
+    <maven.compiler.showWarnings>true</maven.compiler.showWarnings>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
-
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -29,19 +32,8 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-
-      <!--
-      <dependency>
-        <groupId>org.jboss.bom</groupId>
-        <artifactId>jboss-eap-javaee7</artifactId>
-        <version>7.1.0.GA</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      -->
     </dependencies>
   </dependencyManagement>
-
   <dependencies>
     <dependency>
       <groupId>com.thoughtworks.xstream</groupId>
@@ -75,7 +67,6 @@
       <artifactId>kie-api</artifactId>
       <scope>provided</scope>
     </dependency>
-
     <dependency>
       <groupId>org.jbpm</groupId>
       <artifactId>jbpm-human-task-core</artifactId>
@@ -86,7 +77,6 @@
       <artifactId>jboss-jms-api_2.0_spec</artifactId>
       <scope>provided</scope>
     </dependency>
-
   </dependencies>
   <build>
     <plugins>
@@ -97,11 +87,4 @@
       </plugin>
     </plugins>
   </build>
-  <distributionManagement>
-    <repository>
-      <id>central</id>
-      <name>80b49ab0e855-releases</name>
-      <url>http://18.202.9.155:8081/artifactory/libs-release-local</url>
-    </repository>
-  </distributionManagement>
 </project>
