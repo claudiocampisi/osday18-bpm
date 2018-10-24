@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>it.keypartner.demo</groupId>
   <artifactId>osday18-process</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.0</version>
   <packaging>kjar</packaging>
   <name>osday18-process</name>
   <description></description>
@@ -19,8 +19,8 @@
     <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
     <version.org.rhpam>7.0.0.GA-redhat-3</version.org.rhpam>
     <maven.compiler.optimize>true</maven.compiler.optimize>
-    <maven.compiler.showWarnings>true</maven.compiler.showWarnings>
     <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.showWarnings>true</maven.compiler.showWarnings>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
   <dependencyManagement>
