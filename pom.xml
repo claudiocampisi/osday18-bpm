@@ -8,13 +8,7 @@
   <packaging>kjar</packaging>
   <name>osday18-process</name>
   <description></description>
-  <distributionManagement>
-    <repository>
-      <id>central</id>
-      <name>80b49ab0e855-releases</name>
-      <url>http://18.202.9.155:8081/artifactory/libs-release-local</url>
-    </repository>
-  </distributionManagement>
+
   <properties>
     <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
     <version.org.rhpam>7.0.0.GA-redhat-3</version.org.rhpam>

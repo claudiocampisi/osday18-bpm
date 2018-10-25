@@ -83,55 +83,12 @@ public class LogProcessEventListener extends DefaultProcessEventListener {
             log.info("before triggered human task node {}", humanTaskNode.getName());
             NotificationInfo notificationInfo = new NotificationInfo();
             String deploymentId = (String)event.getKieRuntime().getEnvironment().get("deploymentId");
-
             notificationInfo.taskName = humanTaskNode.getName();
             notificationInfo.deploymentId = deploymentId;
             sendMessage(notificationInfo,BEFORE_HUMAN_TASK_EVENT_TYPE);
         }
     }
 
-    /*
-
-    private NotificationInfo buildMessage(ProcessEvent event) {
-        NotificationInfo notificationInfo = new NotificationInfo();
-
-        String deploymentId = (String)event.getKieRuntime().getEnvironment().get("deploymentId");
-        String taskName = event.getName();
-        String
-        String artefactId = deploymentId.split(":")[1];
-        remoteLogMessage.setComponent(artefactId.replace("process", "bpm"));
-        remoteLogMessage.setProcessId(event.getProcessInstance().getProcessId());
-        remoteLogMessage.setDeploymentId(deploymentId);
-        remoteLogMessage.setLogLevel(RemoteLogLevel.INFO);
-        remoteLogMessage.setTime(System.currentTimeMillis());
-        WorkflowProcessInstance processInstance = (WorkflowProcessInstance) event.getProcessInstance();
-        // IPWBTCOM-549
-        Object workOrderActivityId = processInstance.getVariable("workOrderActivityId");
-        
-        if( workOrderActivityId != null) {
-            remoteLogMessage.putContextParams("idWorkOrderActivity", String.valueOf(workOrderActivityId));
-        }
-        String pod = (String) processInstance.getVariable("pod");
-        if( pod != null && pod.length()>0) {
-            remoteLogMessage.putContextParams("pointOfDelivery", pod);
-        }
-        String workOrderRequestId = (String) processInstance.getVariable("idRequest");
-        if( workOrderRequestId != null) {
-            remoteLogMessage.putContextParams("idWorkOrderRequest", workOrderRequestId);
-        }
-        String workOrderMassiveId = (String) processInstance.getVariable("idWorkOrderMassive");
-        if( workOrderMassiveId != null && workOrderMassiveId.length()>0) {
-            remoteLogMessage.putContextParams("idWorkOrderMassive", workOrderMassiveId);
-        }
-        String restUrl = (String) processInstance.getVariable("url");
-        if( restUrl != null && restUrl.length()>0 && processInstance.getProcessId().contains("rest-client")) {
-            remoteLogMessage.putContextParams("restUrl", restUrl);
-        }
-
-        return remoteLogMessage;
-
-    }
-    */
 
     protected void sendMessage(Object messageContent, Integer eventType) {
         if (connectionFactory == null && queue == null) {
